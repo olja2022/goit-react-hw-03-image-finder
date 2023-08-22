@@ -6,7 +6,6 @@ import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 
 export const PER_PAGE = 12;
-
 export class App extends Component {
   state = {
     request: '',
