@@ -4,6 +4,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
+import { getFetch } from 'components/services/getFetch';
+import { Loader } from 'components/Loader/Loader';
+import { Button } from 'components/Button/Button';
 
 export const PER_PAGE = 12;
 export class App extends Component {
@@ -50,7 +53,7 @@ loadMoreBtnClick = () => {
           return toast.info(`Відсутні зображення за запитом "${request}"`);
         }
 
-        if (currentPage === 1)
+        if (page === 1)        
           toast.success(
             `Знайдено ${totalHits} результат(ів) по запиту "${request}"`
           );
